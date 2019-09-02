@@ -95,32 +95,32 @@ console.log(freq);
 //first train time 
 
 let fTrainTimeConvert = moment(firstT, "HH:mm").subtract(1, "years");
-console.log(fTrainTimeConvert);
+//console.log(fTrainTimeConvert);
 
 //current time
 
 let currentTime = moment();
-console.log("Current Time: " + moment(currentTime).format("HH:mm"))
+//console.log("Current Time: " + moment(currentTime).format("HH:mm A"))
 
 //difference between start time and now
 
 let tDiff = moment().diff(moment(fTrainTimeConvert), "minutes");
-console.log("Time Difference: " + tDiff);
+//console.log("Time Difference: " + tDiff);
 
 // time apart (remainder)
 
 let remainT = tDiff % freq; 
-console.log(remainT); 
+//console.log(remainT); 
 
 //until next train 
 
 let mAway = freq - remainT; 
-console.log("Min till Train: " + mAway);
+//console.log("Min till Train: " + mAway);
 
 //NXT Train
 
-let nextT = moment().add(mAway, "minutes");
-console.log("Arriving: " + moment(nextT).format("HH:mm"));
+let nextT = moment().add(mAway, "minutes").format("HH:mm");
+//console.log("Arriving: " + moment(nextT).format("HH:mm A"));
 
 //creating new row for data to show in HTML (end of step 3)
 
